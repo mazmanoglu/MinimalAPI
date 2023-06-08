@@ -14,5 +14,16 @@ if (app.Environment.IsDevelopment())
 	app.UseSwaggerUI();
 }
 
+app.MapGet("/helloworldget", () => "Hello World from Minimal API"); // ==> HTTP GET
+app.MapGet("/helloworld", () =>
+{
+	return "Hello World from detailed text";
+});
+app.MapGet("/helloworldexception", () =>
+{
+	return Results.NotFound("sorry guys, we couldn't find your webpage, come tomorrow");
+});
+app.MapPost("/helloworldpost",()=> "Hello World from API Post"); // ==> HTTP POST
+
 app.UseHttpsRedirection();
 app.Run();
