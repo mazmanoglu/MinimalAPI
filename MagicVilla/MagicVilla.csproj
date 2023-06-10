@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable> 
+	  <!-- With .NET 6, it comes 'enabled' as default but we make this nullable as 'disabled' because if you use older versions of .NET, your program couldn't find enpoints-->
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
